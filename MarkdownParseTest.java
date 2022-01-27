@@ -32,4 +32,11 @@ public class MarkdownParseTest {
 	    String contents = Files.readString(fileName);
         assertEquals(MarkdownParse.getLinks(contents), List.of("https://something.com", "some-page.html"));
     }
+
+    @Test
+    public void testMarkDownParseNewLine() throws IOException{
+        Path fileName = Path.of("newLineAtEnd.md");
+	    String contents = Files.readString(fileName);
+        assertEquals(MarkdownParse.getLinks(contents), List.of("https://something.com", "some-page.html"));
+    }
 } 
