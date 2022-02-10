@@ -5,6 +5,8 @@ cd markdown-parse
 FILE=MarkdownParse.java
 if test -f "$FILE"; then
     echo "$FILE exists."
+else 
+    echo "$FILE does not exist."
 fi
 javac -cp lib/*:. GradingTests.java MarkdownParse.java
 java -cp lib/*:. org.junit.runner.JUnitCore GradingTests
