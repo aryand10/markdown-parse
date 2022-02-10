@@ -2,5 +2,9 @@
 git clone $1
 cp GradingTests.java markdown-parse/
 cd markdown-parse
+FILE=MarkdownParse.java
+if test -f "$FILE"; then
+    echo "$FILE exists."
+fi
 javac -cp lib/*:. GradingTests.java MarkdownParse.java
 java -cp lib/*:. org.junit.runner.JUnitCore GradingTests
