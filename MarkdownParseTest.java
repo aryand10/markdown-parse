@@ -39,4 +39,12 @@ public class MarkdownParseTest {
 	    String contents = Files.readString(fileName);
         assertEquals(MarkdownParse.getLinks(contents), List.of("https://something.com", "some-page.html"));
     }
+
+    //New Test added for Snippet 1 Lab Report 4
+    @Test
+    public void testMarkDownParseSnippet1() throws IOException{
+        Path fileName = Path.of("snippet1.md");
+	    String contents = Files.readString(fileName);
+        assertEquals(MarkdownParse.getLinks(contents), List.of("`google.com", "google.com", "ucsd.edu"));
+    }
 } 
