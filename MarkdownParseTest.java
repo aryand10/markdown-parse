@@ -59,7 +59,7 @@ public class MarkdownParseTest {
     //New Test added for Snippet 3 Lab Report 4
     @Test
     public void testMarkDownParseSnippet3() throws IOException{
-        Path fileName = Path.of("snippet2.md");
+        Path fileName = Path.of("snippet3.md");
 	    String contents = Files.readString(fileName);
         assertEquals(List.of("https://twitter.com", "https://ucsd-cse15l-w22.github.io/", "https://cse.ucsd.edu/"), MarkdownParse.getLinks(contents));
     }
