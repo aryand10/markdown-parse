@@ -54,8 +54,7 @@ public class MarkdownParse {
         return toReturn;
     }
     public static void main(String[] args) throws IOException {
-		File f = new File(args[0]);
-        Map<String, List<String>> links = getLinks(f);
+        Map<String, List<String>> links = getLinks(new File(args[0]));
         System.out.println(links);
     }
 }
